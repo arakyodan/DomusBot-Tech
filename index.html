@@ -3,74 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DomusBot Tech | Inovação e Proteção</title>
+    <title>DomusBot Tech | Robótica Assistiva</title>
+    <!-- O link abaixo é fundamental para que o site não fique branco como no print -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
+<header class="main-header">
+    <div class="container">
         <div class="logo">DOMUSBOT <span>TECH</span></div>
-        <ul>
-            <li><a href="#empresa">A Empresa</a></li>
-            <li><a href="#tecnologia">Tecnologia</a></li>
-            <li><a href="#simulador">Simulador LGPD</a></li>
-        </ul>
-    </nav>
-    <div class="hero">
-        <h1>Autonomia com Dignidade</h1>
-        <p>Desenvolvendo robótica assistiva com Privacy by Design e processamento local.</p>
-        <a href="#simulador" class="btn">Conheça Nosso Compromisso</a>
+        <nav>
+            <ul>
+                <li><a href="#empresa">A Empresa</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#juridico">Conformidade</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
-<main>
-    <!-- 1. Descrição da Empresa -->
-    <section id="empresa" class="content">
-        <h2>Sobre a DomusBot Tech</h2>
-        <p>Somos uma startup focada em redefinir a autonomia no lar, integrando IA e robótica para suportar idosos e PcDs em suas tarefas diárias. Operamos como uma <strong>Sociedade Limitada (LTDA)</strong>, garantindo segurança jurídica e proteção patrimonial.</p>
+<section class="hero">
+    <div class="container">
+        <h1>Inovação e Autonomia no Lar</h1>
+        <p>Desenvolvimento de robôs assistivos com foco em idosos e PcDs, operando sob os mais rígidos pilares da LGPD.</p>
+    </div>
+</section>
+
+<main class="container">
+    <section id="empresa" class="section">
+        <h2>DomusBot Tech</h2>
+        <p>A DomusBot Tech é uma startup de base tecnológica dedicada ao desenvolvimento e licenciamento de robôs autônomos para assistência domiciliar. Nossa missão é redefinir a autonomia no lar, integrando inteligência artificial para suportar indivíduos em suas tarefas diárias.</p>
+        <p><strong>Tipo Societário:</strong> Sociedade Limitada (LTDA), escolhida pela necessidade de segregação patrimonial e proteção jurídica dos sócios.</p>
     </section>
 
-    <!-- 2. Tecnologia e Segurança -->
-    <section id="tecnologia" class="features">
-        <div class="feature-card">
+    <section id="tecnologia" class="grid">
+        <div class="card">
             <h3>Visão Computacional</h3>
-            <p>Mapeamento semântico 3D via sensores LiDAR para reconhecimento de riscos como quedas.</p>
+            <p>Utilizamos sensores LiDAR para mapeamento 3D e reconhecimento de situações de risco, como quedas.</p>
         </div>
-        <div class="feature-card">
+        <div class="card">
             <h3>Edge Computing</h3>
-            <p>A tomada de decisão ocorre localmente no robô, garantindo velocidade e total privacidade.</p>
+            <p>Toda a tomada de decisão ocorre localmente no hardware do robô, garantindo velocidade e privacidade total.</p>
         </div>
-        <div class="feature-card">
+        <div class="card">
             <h3>Privacy by Design</h3>
-            <p>Obscurecimento dinâmico (Blurring) em áreas de nudez e criptografia de ponta a ponta.</p>
+            <p>Criptografia assimétrica e obscurecimento dinâmico de imagens em áreas de alta intimidade.</p>
         </div>
     </section>
 
-    <!-- 3. Simulador Jurídico Integrado -->
-    <section id="simulador" class="simulador-box">
-        <h2>Simulador de Conformidade e Proteção</h2>
-        <p>Como a DomusBot Tech protege você em diferentes situações?</p>
-        
-        <div class="control">
-            <select id="situacao">
-                <option value="">-- Selecione uma situação --</option>
-                <option value="bullying">Uso de dados para segurança (Art. 146-A CP)</option>
-                <option value="privacidade">Monitoramento em áreas íntimas (Banheiros/Quartos)</option>
-                <option value="dados">Tratamento de dados sensíveis (Art. 11 LGPD)</option>
-                <option value="acesso">Acesso de terceiros às imagens (Zero-Knowledge)</option>
-            </select>
-            <button onclick="analisar()">Analisar Proteção</button>
-        </div>
-        
-        <div id="resultado" class="result-display"></div>
+    <section id="juridico" class="section highlights">
+        <h2>Compromisso Ético e LGPD</h2>
+        <ul>
+            <li><strong>Consentimento (Art. 11):</strong> Tratamento de dados sensíveis baseado no consentimento específico e destacado.</li>
+            <li><strong>Inviolabilidade da Intimidade:</strong> Processamento de imagens sem envio para a nuvem.</li>
+            <li><strong>Acesso Zero-Knowledge:</strong> Nem mesmo os funcionários da empresa possuem as chaves das imagens residenciais.</li>
+        </ul>
     </section>
 </main>
 
-<footer>
-    <p>&copy; 2026 DomusBot Tech - Desenvolvido por Wellington Jonatan, Wallace e Equipe</p>
+<footer class="main-footer">
+    <p>&copy; 2026 DomusBot Tech. Projeto A3 - Wellington Jonatan e Wallace.</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
