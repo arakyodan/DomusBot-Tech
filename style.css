@@ -33,3 +33,62 @@ nav a:hover { color: var(--accent); }
     .grid { grid-template-columns: 1fr; }
     .logo, nav { float: none; text-align: center; }
 }
+/* Esconde as seções que não estão ativas */
+.page-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.page-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Layout da Apresentação */
+.intro-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Grid de Modelos */
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.model-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.model-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.model-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
