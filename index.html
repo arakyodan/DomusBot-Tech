@@ -1,37 +1,53 @@
-<section id="empresa" class="content">
-    <h1>DomusBot Tech</h1>
-    <p class="subtitle">Redefinindo a autonomia no lar com inteligência e segurança.</p>
-    
-    <div class="intro-grid">
-        <div class="text-box">
-            <h3>Nossa Missão</h3>
-            <p>Uma startup de base tecnológica dedicada ao desenvolvimento de robôs autônomos para assistência domiciliar, focada em idosos (aging in place) e pessoas com deficiência (PcD).</p>
+</header>
+
+<main>
+    <!-- Seção Informativa sobre a Lei -->
+    <section id="lei">
+        <h2>A Nova Lei (Art. 146-A CP)</h2>
+        <p>O Cyberbullying agora é crime tipificado pela <strong>Lei 14.811/2024</strong>. A intimidação sistemática no ambiente virtual pode levar à reclusão e multa.</p>
+    </section>
+
+    <!-- Seção do Simulador Jurídico -->
+    <section id="simulador">
+        <h2>Simulador Jurídico</h2>
+        <p>Selecione uma situação para entender as implicações legais e como proceder:</p>
+        
+        <select id="situacao">
+            <option value="">-- Selecione sua situação --</option>
+            <option value="bullying">Intimidação repetitiva e humilhação (Cyberbullying)</option>
+            <option value="ofensa">Xingamentos e ofensas à honra (Injúria/Difamação)</option>
+            <option value="stalking">Perseguição persistente e invasão de privacidade</option>
+            <option value="fake">Criação de perfis falsos com meu nome/foto</option>
+            <option value="vazamento">Vazamento de fotos ou vídeos íntimos</option>
+        </select>
+
+        <button onclick="analisar()">Analisar Caso</button>
+        
+        <!-- Onde aparecerá o resultado da análise -->
+        <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+        
+        <!-- Onde aparecerá a ajuda específica via JS -->
+        <div id="ajuda-especifica" style="margin-top: 15px;"></div>
+    </section>
+
+    <!-- Seção Geral de Ajuda -->
+    <section id="ajuda">
+        <h2>Guia Geral de Defesa</h2>
+        <div class="passos">
+            <p><strong>1. Preserve as Provas:</strong> Tire prints das mensagens, comentários e URLs dos perfis. Não apague nada!</p>
+            <p><strong>2. Ata Notarial:</strong> Vá a um Cartório de Notas para validar os prints como prova jurídica oficial.</p>
+            <p><strong>3. Registro de Ocorrência:</strong> Procure a Delegacia de Polícia Civil mais próxima ou registre no site da Delegacia Virtual.</p>
+            <p><strong>4. Canais de Denúncia:</strong> Disque 100 ou 180 para casos graves de violação de direitos humanos.</p>
         </div>
-        <div class="text-box">
-            <h3>Proposta de Valor</h3>
-            <p>Entrega de dignidade, segurança preditiva e otimização do tempo por meio de tecnologia intuitiva e altamente protegida.</p>
-        </div>
-    </div>
-</section>
-<section id="seguranca" class="content highlights">
-    <h2>🛡️ Segurança de Dados e Conformidade (LGPD)</h2>
-    <div class="cards-container">
-        <div class="card">
-            <h3>Processamento Local</h3>
-            <p>Utilizamos <strong>Edge Computing</strong>. As imagens de navegação não são enviadas para a nuvem, garantindo a inviolabilidade da intimidade conforme a CF/88.</p>
-        </div>
-        <div class="card">
-            <h3>Obscurecimento Dinâmico</h3>
-            <p>Nossa IA aplica <em>Blurring</em> automático em áreas de nudez e permite a configuração de "Zonas Cegas", onde a câmera é desativada pelo usuário.</p>
-        </div>
-        <div class="card">
-            <h3>Acesso Zero-Knowledge</h3>
-            <p>Nem mesmo a DomusBot possui as chaves para visualizar suas imagens. A transmissão é via P2P com criptografia assimétrica militar.</p>
-        </div>
-    </div>
-</section>
-<section id="juridico" class="content">
-    <h2>Estrutura Jurídica</h2>
-    <p>A DomusBot Tech opera como uma <strong>Sociedade Limitada (LTDA)</strong>.</p>
-    <p>Escolhemos este modelo para garantir a <strong>segregação patrimonial</strong>, protegendo os sócios e oferecendo segurança jurídica para investidores no setor de hardware assistivo.</p>
-</section>
+    </section>
+</main>
+
+<footer>
+    <p>Desenvolvido por Wellington Jonatan Pontes de Sousa</p>
+</footer>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+
+</body>
+</html>
