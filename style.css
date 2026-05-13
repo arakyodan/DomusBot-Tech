@@ -1,21 +1,35 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; background-color: #f4f7f6; }
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f4f7f6;
+    --text: #333;
+}
 
-nav { background: #2c3e50; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; color: white; }
-.logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; }
-.logo span { color: #3498db; }
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav a { color: white; text-decoration: none; font-size: 0.9rem; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+.container { width: 85%; max-width: 1100px; margin: auto; overflow: hidden; }
 
-.hero { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&w=1350&q=80'); background-size: cover; color: white; padding: 100px 5%; text-align: center; }
-.btn { display: inline-block; background: #3498db; color: white; padding: 10px 25px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+/* Header e Nav */
+.main-header { background: var(--primary); color: #fff; padding-top: 30px; min-height: 70px; border-bottom: var(--accent) 3px solid; }
+.logo { float: left; font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--accent); }
+nav { float: right; margin-top: 10px; }
+nav ul { list-style: none; display: flex; }
+nav li { margin-left: 20px; }
+nav a { color: #fff; text-decoration: none; font-size: 16px; transition: 0.3s; }
+nav a:hover { color: var(--accent); }
 
-.content, .features, .simulador-box { padding: 60px 10%; text-align: center; }
-.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; background: white; }
-.feature-card { padding: 30px; border-bottom: 4px solid #3498db; background: #f9f9f9; }
+/* Hero */
+.hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=1000&q=80'); background-size: cover; color: #fff; height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; }
 
-.simulador-box { background: #ecf0f1; border-radius: 10px; margin: 40px 10%; }
-.result-display { margin-top: 20px; padding: 20px; background: white; border-radius: 5px; border-left: 5px solid #2ecc71; min-height: 50px; }
+/* Grid de Tecnologia */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px 0; }
+.card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid var(--accent); }
 
-footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+.section { padding: 40px 0; }
+.highlights { background: #fff; padding: 30px; border-radius: 8px; }
+.main-footer { background: var(--primary); color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+
+@media(max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .logo, nav { float: none; text-align: center; }
+}
