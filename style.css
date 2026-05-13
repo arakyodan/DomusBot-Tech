@@ -3,92 +3,191 @@
     --accent: #3498db;
     --bg: #f4f7f6;
     --text: #333;
+    --white: #ffffff;
 }
 
-body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
-.container { width: 85%; max-width: 1100px; margin: auto; overflow: hidden; }
+/* Configurações Gerais */
+body { 
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+    background: var(--bg); 
+    color: var(--text); 
+    margin: 0; 
+    padding: 0;
+    line-height: 1.6; 
+}
 
-/* Header e Nav */
-.main-header { background: var(--primary); color: #fff; padding-top: 30px; min-height: 70px; border-bottom: var(--accent) 3px solid; }
-.logo { float: left; font-size: 1.5rem; font-weight: bold; }
+.container { 
+    width: 90%; 
+    max-width: 1100px; 
+    margin: auto; 
+    overflow: hidden; 
+}
+
+/* Header e Navegação */
+.main-header { 
+    background: var(--primary); 
+    color: var(--white); 
+    padding: 20px 0; 
+    min-height: 80px; 
+    border-bottom: var(--accent) 3px solid; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    float: left; 
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .logo span { color: var(--accent); }
-nav { float: right; margin-top: 10px; }
-nav ul { list-style: none; display: flex; }
-nav li { margin-left: 20px; }
-nav a { color: #fff; text-decoration: none; font-size: 16px; transition: 0.3s; }
+
+nav { 
+    float: right; 
+    margin-top: 10px; 
+}
+
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+nav li { margin-left: 25px; }
+
+nav a { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: 500;
+    transition: 0.3s; 
+}
+
 nav a:hover { color: var(--accent); }
 
-/* Hero */
-.hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=1000&q=80'); background-size: cover; color: #fff; height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; }
-
-/* Grid de Tecnologia */
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px 0; }
-.card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid var(--accent); }
-
-.section { padding: 40px 0; }
-.highlights { background: #fff; padding: 30px; border-radius: 8px; }
-.main-footer { background: var(--primary); color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
-
-@media(max-width: 768px) {
-    .grid { grid-template-columns: 1fr; }
-    .logo, nav { float: none; text-align: center; }
-}
-/* Esconde as seções que não estão ativas */
+/* Seções e Controle de Visibilidade (SPA) */
 .page-content {
-    display: none;
-    animation: fadeIn 0.5s ease-in;
+    display: none; /* Escondido por padrão */
+    animation: fadeIn 0.6s ease-in-out;
+    padding: 60px 0;
 }
 
 .page-content.active {
-    display: block;
+    display: block; /* Aparece quando a classe .active é adicionada pelo JS */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Layout da Apresentação */
+/* Hero Section (Banner) */
+.hero { 
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=1000&q=80'); 
+    background-size: cover; 
+    background-position: center;
+    color: var(--white); 
+    height: 350px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* Layout da Apresentação (Intro) */
 .intro-flex {
     display: flex;
     align-items: center;
-    gap: 40px;
-    text-align: left;
-    margin-top: 30px;
+    gap: 50px;
+    margin-top: 20px;
 }
 
+.intro-text { flex: 1; }
+.intro-text h2 { color: var(--primary); margin-bottom: 20px; }
+
+.intro-image { flex: 1; text-align: center; }
 .intro-image img {
     width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-/* Grid de Modelos */
+.caption { margin-top: 10px; font-style: italic; color: #666; }
+
+/* Grid de Modelos de Robôs */
 .models-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 40px;
 }
 
 .model-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-    border: 1px solid #eee;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .model-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--accent);
 }
 
 .model-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.model-card h3 { color: var(--primary); margin-bottom: 15px; }
+
+/* Simulador e Destaques */
+.simulador-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.highlights { 
+    background: var(--white); 
+    padding: 30px; 
+    border-radius: 8px; 
+    border-left: 5px solid var(--accent);
+}
+
+/* Footer */
+.main-footer { 
+    background: var(--primary); 
+    color: var(--white); 
+    text-align: center; 
+    padding: 30px 0; 
+    margin-top: 60px; 
+}
+
+/* Responsividade (Mobile) */
+@media(max-width: 768px) {
+    .logo, nav { float: none; text-align: center; }
+    nav ul { justify-content: center; margin-top: 15px; }
+    nav li { margin: 0 10px; }
+    
+    .intro-flex { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 1.8rem; }
+    
+    .models-grid { grid-template-columns: 1fr; }
 }
