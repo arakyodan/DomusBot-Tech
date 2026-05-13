@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DomusBot Tech | Robótica Assistiva</title>
-    <!-- O link abaixo é fundamental para que o site não fique branco como no print -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,91 +29,102 @@
 </section>
 
 <main class="container">
-    <section id="empresa" class="section">
-        <h2>DomusBot Tech</h2>
-        <p>A DomusBot Tech é uma startup de base tecnológica dedicada ao desenvolvimento e licenciamento de robôs autônomos para assistência domiciliar. Nossa missão é redefinir a autonomia no lar, integrando inteligência artificial para suportar indivíduos em suas tarefas diárias.</p>
-        <p><strong>Tipo Societário:</strong> Sociedade Limitada (LTDA), escolhida pela necessidade de segregação patrimonial e proteção jurídica dos sócios.</p>
-    </section>
-
-    <section id="tecnologia" class="grid">
-        <div class="card">
-            <h3>Visão Computacional</h3>
-            <p>Utilizamos sensores LiDAR para mapeamento 3D e reconhecimento de situações de risco, como quedas.</p>
-        </div>
-        <div class="card">
-            <h3>Edge Computing</h3>
-            <p>Toda a tomada de decisão ocorre localmente no hardware do robô, garantindo velocidade e privacidade total.</p>
-        </div>
-        <div class="card">
-            <h3>Privacy by Design</h3>
-            <p>Criptografia assimétrica e obscurecimento dinâmico de imagens em áreas de alta intimidade.</p>
-        </div>
-    </section>
-
-    <section id="juridico" class="section highlights">
-        <h2>Compromisso Ético e LGPD</h2>
-        <ul>
-            <li><strong>Consentimento (Art. 11):</strong> Tratamento de dados sensíveis baseado no consentimento específico e destacado.</li>
-            <li><strong>Inviolabilidade da Intimidade:</strong> Processamento de imagens sem envio para a nuvem.</li>
-            <li><strong>Acesso Zero-Knowledge:</strong> Nem mesmo os funcionários da empresa possuem as chaves das imagens residenciais.</li>
-        </ul>
-    </section>
-</main>
-<main class="container">
     <!-- SEÇÃO 1: A EMPRESA (Apresentação e Dia a Dia) -->
     <section id="empresa" class="page-content active">
         <div class="intro-flex">
             <div class="intro-text">
                 <h2>Inovação que Transforma Vidas</h2>
-                <p>A DomusBot Tech redefine a autonomia no lar, integrando robótica e IA para suportar idosos e PcDs. Operamos como uma Sociedade Limitada (LTDA) para garantir a segurança jurídica necessária em um mercado de alta tecnologia.</p>
+                <p>A DomusBot Tech é uma startup de base tecnológica dedicada ao desenvolvimento e licenciamento de robôs autônomos para assistência domiciliar. Nossa missão é redefinir a autonomia no lar, integrando inteligência artificial para suportar indivíduos em suas tarefas diárias.</p>
+                <p><strong>Tipo Societário:</strong> Sociedade Limitada (LTDA), escolhida pela necessidade de segregação patrimonial e proteção jurídica dos sócios conforme a Teoria da Empresa.</p>
             </div>
             <div class="intro-image">
-                <!-- Imagem do robô no dia a dia ajudando um idoso -->
-                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robô DomusBot no dia a dia">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robô DomusBot ajudando um idoso">
                 <p class="caption">Modelo Assistencial em operação doméstica.</p>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO 2: TECNOLOGIA (Os Três Modelos) -->
+    <!-- SEÇÃO 2: TECNOLOGIA (Linha de Produtos) -->
     <section id="tecnologia" class="page-content">
-        <h2>Nossa Linha de Robôs</h2>
+        <h2 style="text-align: center; margin-bottom: 30px;">Nossa Linha de Robôs</h2>
+        
+        <!-- Grid de Modelos -->
         <div class="models-grid">
-            <!-- Modelo 1: O "Cão" Guia/Vigia (Para Cegos e PcDs) -->
             <div class="model-card">
-                <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=300&q=80" alt="Robô Vigia e Guia">
+                <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=300&q=80" alt="Robô Guia">
                 <h3>DomusGuard (Vigia & Guia)</h3>
-                <p>O modelo em formato de cachorro que auxilia PcDs e cegos na locomoção, além de realizar a vigilância perimetral da residência.</p>
+                <p>Modelo em formato de cachorro que auxilia PcDs e cegos na locomoção e segurança perimetral.</p>
             </div>
 
-            <!-- Modelo 2: O Doméstico (Tarefas de Casa) -->
             <div class="model-card">
                 <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=300&q=80" alt="Robô Doméstico">
                 <h3>DomusButler (Doméstico)</h3>
-                <p>Focado na automação de tarefas diárias e assistência física leve, otimizando o tempo e garantindo eficiência residencial.</p>
+                <p>Focado na automação de tarefas diárias e assistência física leve para gestão residencial.</p>
             </div>
 
-            <!-- Modelo 3: O Amigo (Diversão e Companhia) -->
             <div class="model-card">
-                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&w=300&q=80" alt="Robô Companheiro">
+                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&w=300&q=80" alt="Robô Amigo">
                 <h3>DomusBuddy (Companhia)</h3>
-                <p>Especializado em interação social e suporte emocional para pessoas que buscam companhia, combatendo o isolamento social.</p>
+                <p>Especializado em interação social e suporte emocional para combater o isolamento.</p>
+            </div>
+        </div>
+
+        <!-- Diferenciais Técnicos -->
+        <div class="grid" style="margin-top: 50px;">
+            <div class="card">
+                <h3>Visão Computacional</h3>
+                <p>Sensores LiDAR para mapeamento 3D e reconhecimento de riscos (quedas/obstruções).</p>
+            </div>
+            <div class="card">
+                <h3>Edge Computing</h3>
+                <p>Processamento local no hardware: rapidez de resposta e privacidade absoluta.</p>
+            </div>
+            <div class="card">
+                <h3>Privacy by Design</h3>
+                <p>Criptografia assimétrica e anonimização de dados desde a concepção do produto.</p>
             </div>
         </div>
     </section>
 
     <!-- SEÇÃO 3: CONFORMIDADE (Simulador Jurídico) -->
     <section id="juridico" class="page-content">
-        <!-- Mantenha o seu simulador de conformidade aqui -->
-        <h2>Portal de Conformidade LGPD</h2>
+        <h2>Portal de Conformidade e LGPD</h2>
+        
         <div class="simulador-box">
-             <!-- [Seu código do simulador já desenvolvido] -->
+            <p>Selecione uma situação para entender como nossos protocolos protegem seus dados:</p>
+            
+            <div style="margin: 20px 0;">
+                <select id="situacao" style="padding: 10px; width: 70%; border-radius: 5px;">
+                    <option value="">-- Selecione uma situação --</option>
+                    <option value="privacidade">Monitoramento em áreas íntimas (Quartos/Banheiros)</option>
+                    <option value="dados">Tratamento de dados sensíveis (Biometria)</option>
+                    <option value="acesso">Acesso de terceiros às imagens (Criptografia)</option>
+                </select>
+                <button onclick="analisar()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Analisar Proteção</button>
+            </div>
+
+            <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+            <div id="ajuda-especifica" style="margin-top: 15px; color: #555;"></div>
+        </div>
+
+        <div class="highlights" style="margin-top: 30px;">
+            <h3>Pilares Éticos:</h3>
+            <ul>
+                <li><strong>Consentimento (Art. 11 LGPD):</strong> Tratamento de dados sensíveis baseado em autorização específica.</li>
+                <li><strong>Acesso Zero-Knowledge:</strong> A empresa não possui chaves para ver imagens das residências.</li>
+            </ul>
         </div>
     </section>
 </main>
+
 <footer class="main-footer">
-    <p>&copy; 2026 DomusBot Tech. Projeto A3 - Wellington Jonatan e Wallace.</p>
+    <div class="container">
+        <p>&copy; 2026 DomusBot Tech. Projeto A3 - Teoria da Empresa e Direito Societário.</p>
+        <p>Integrantes: Wellington Jonatan e Wallace</p>
+    </div>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
