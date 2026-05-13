@@ -40,5 +40,21 @@ function analisar() {
 
         default:
             resultado.innerHTML = "Situação em análise pelos nossos protocolos de conformidade.";
-    }
+    }// Lógica para trocar de página no menu
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove a classe ativa de todas as seções
+        document.querySelectorAll('.page-content').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Pega o ID da seção pelo href (ex: #tecnologia)
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).classList.add('active');
+    });
+});
+
+// [Mantenha aqui sua função analisar() que já criamos antes]
 }
