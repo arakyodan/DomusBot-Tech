@@ -17,6 +17,7 @@
                 <li><a href="#empresa" class="nav-link active-menu">A Empresa</a></li>
                 <li><a href="#tecnologia" class="nav-link">Tecnologia</a></li>
                 <li><a href="#juridico" class="nav-link">Conformidade & LGPD</a></li>
+                <li><a href="#compra" class="nav-link">Adquirir Robô</a></li>
             </ul>
         </nav>
     </div>
@@ -50,89 +51,13 @@
     </section>
 
     <section id="tecnologia" class="page-content">
-        <h2 style="text-align: center; margin-bottom: 30px;">Nossa Linha de Robôs</h2>
+        <h2 style="text-align: center; margin-bottom: 10px;">Nossa Linha de Robôs</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">Clique em qualquer modelo para visualizar especificações técnicas e detalhes operacionais.</p>
         
         <div class="models-grid">
-            <div class="model-card">
-                <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=300&q=80" alt="Robô Guia">
+            <div class="model-card" onclick="abrirDetalhes('DomusGuard')">
+                <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=500&q=80" alt="Robô Guia DomusGuard">
                 <h3>DomusGuard (Vigia & Guia)</h3>
                 <p>Modelo em formato de cachorro que auxilia PcDs e cegos na locomoção e segurança perimetral.</p>
+                <span class="btn-comprar">Ver Detalhes</span>
             </div>
-
-            <div class="model-card">
-                <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=300&q=80" alt="Robô Doméstico">
-                <h3>DomusButler (Doméstico)</h3>
-                <p>Focado na automação de tarefas diárias e assistência física leve para gestão residencial.</p>
-            </div>
-
-            <div class="model-card">
-                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&w=300&q=80" alt="Robô Amigo">
-                <h3>DomusBuddy (Companhia)</h3>
-                <p>Especializado em interação social e suporte emocional para combater o isolamento.</p>
-            </div>
-        </div>
-
-        <div class="grid" style="margin-top: 50px;">
-            <div class="card">
-                <h3><i class="bi bi-eye"></i> Visão Computacional</h3>
-                <p>Sensores LiDAR para mapeamento 3D e reconhecimento de riscos (quedas/obstruções).</p>
-            </div>
-            <div class="card">
-                <h3><i class="bi bi-cpu"></i> Edge Computing</h3>
-                <p>Processamento local no hardware: rapidez de resposta e privacidade absoluta.</p>
-            </div>
-            <div class="card">
-                <h3><i class="bi bi-shield-lock"></i> Privacy by Design</h3>
-                <p>Criptografia assimétrica e anonimização de dados desde a concepção do produto.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="juridico" class="page-content">
-        <h2>Portal de Conformidade, Governança e LGPD</h2>
-        
-        <div class="governança-box" style="margin-bottom: 30px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db;">
-            <h3>Estrutura de Governança Corporativa</h3>
-            <p>Alinhada ao tipo societário LTDA, a administração da DomusBot Tech é exercida de forma conjunta pelos sócios quotistas, contando com um comitê técnico de Ética e Segurança de Dados, garantindo decisões rápidas, compliance legal estrito e prestação de contas transparente.</p>
-        </div>
-        
-        <div class="simulador-box">
-            <p>Selecione uma situação para entender como nossos protocolos protegem seus dados:</p>
-            
-            <div class="selector-wrapper" style="margin: 20px 0; display: flex; gap: 10px; flex-wrap: wrap;">
-                <select id="situacao" style="padding: 10px; flex: 1; min-width: 250px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #44;">
-                    <option value="">-- Selecione uma situação --</option>
-                    <option value="privacidade">Monitoramento em áreas íntimas (Quartos/Banheiros)</option>
-                    <option value="dados">Tratamento de dados sensíveis (Biometria)</option>
-                    <option value="acesso">Acesso de terceiros às imagens (Criptografia)</option>
-                </select>
-                <button onclick="analisar()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Analisar Proteção</button>
-            </div>
-
-            <div id="resultado" style="margin-top: 20px; font-weight: bold; color: #2ecc71;"></div>
-            <div id="ajuda-especifica" style="margin-top: 15px; color: #ccc; line-height: 1.6;"></div>
-        </div>
-
-        <div class="highlights" style="margin-top: 30px;">
-            <h3>Pilares Éticos e Legais:</h3>
-            <ul>
-                <li><strong>Consentimento (Art. 11 LGPD):</strong> Tratamento de dados sensíveis baseado em autorização explícita e revogável a qualquer momento pelo titular.</li>
-                <li><strong>Acesso Zero-Knowledge:</strong> Protocolo tecnológico que impede que a nossa própria equipe tenha acesso às imagens brutas gravadas nos lares.</li>
-                <li><strong>Direitos do Titular (Art. 18 LGPD):</strong> Dashboard nativo nos robôs que permite ao cliente consultar, retificar ou deletar seus logs de funcionamento imediatamente.</li>
-            </ul>
-        </div>
-    </section>
-</main>
-
-<footer class="main-footer">
-    <div class="container">
-        <p>&copy; 2026 DomusBot Tech. Projeto A3 - Teoria da Empresa e Direito Societário.</p>
-        <p style="font-size: 0.85rem; color: #888; margin-top: 5px;">Integrantes: Wellington Jonatan e Wallace Wagner Ubirajara de Souza Lima</p>
-        <p style="font-size: 0.75rem; color: #555; margin-top: 5px;">Profa. Renata Ribeiro | Unidade Curricular: Teoria da Empresa e Direito Societário - UNP.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
