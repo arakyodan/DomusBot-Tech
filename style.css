@@ -4,7 +4,6 @@
     --bg: #f4f7f6;
     --text: #333;
     --white: #ffffff;
-    --success: #2ecc71; /* Cor para o resultado positivo do simulador */
 }
 
 /* Configurações Gerais */
@@ -71,22 +70,21 @@ nav a {
 
 nav a:hover { color: var(--accent); }
 
-/* CLASSE NOVA: Feedback visual da aba selecionada no menu */
 nav a.active-menu {
     color: var(--accent);
     border-bottom: 2px solid var(--accent);
     font-weight: bold;
 }
 
-/* Seções e Controle de Visibilidade (SPA) */
+/* Seções e Controle SPA */
 .page-content {
-    display: none; /* Escondido por padrão */
+    display: none; 
     animation: fadeIn 0.6s ease-in-out;
     padding: 60px 0;
 }
 
 .page-content.active {
-    display: block; /* Aparece quando a classe .active é adicionada pelo JS */
+    display: block; 
 }
 
 @keyframes fadeIn {
@@ -94,7 +92,7 @@ nav a.active-menu {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero Section (Banner) */
+/* Hero Section */
 .hero { 
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                 url('https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=1000&q=80'); 
@@ -110,7 +108,7 @@ nav a.active-menu {
 
 .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
-/* Layout da Apresentação (Intro) */
+/* Layout Intro */
 .intro-flex {
     display: flex;
     align-items: center;
@@ -121,7 +119,6 @@ nav a.active-menu {
 .intro-text { flex: 1; }
 .intro-text h2 { color: var(--primary); margin-bottom: 20px; }
 
-/* Bloco de Informações Jurídicas (Tipo Societário e Impacto A3) */
 .legal-box-info {
     margin-top: 25px;
     background: var(--white);
@@ -129,12 +126,6 @@ nav a.active-menu {
     border-radius: 10px;
     border-left: 5px solid var(--primary);
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-.legal-box-info p {
-    margin-bottom: 15px;
-}
-.legal-box-info p:last-child {
-    margin-bottom: 0;
 }
 
 .intro-image { flex: 1; text-align: center; }
@@ -145,4 +136,179 @@ nav a.active-menu {
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.caption { margin-
+.caption { margin-top: 10px; font-style: italic; color: #666; }
+
+/* Grid de Modelos */
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.model-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--accent);
+}
+
+.model-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.model-card h3 { color: var(--primary); margin-bottom: 15px; }
+
+/* Diferenciais Técnicos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.grid .card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.grid .card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Caixa de Governança */
+.governança-box {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.governança-box h3 { color: var(--primary); margin-bottom: 10px; }
+
+/* Simulador e Checkout Boxes */
+.simulador-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.highlights { 
+    background: var(--white); 
+    padding: 30px; 
+    border-radius: 12px; 
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.highlights h3 { color: var(--primary); margin-bottom: 15px; }
+.highlights ul { padding-left: 20px; }
+.highlights li { margin-bottom: 12px; }
+
+/* Botões */
+.btn-comprar {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+/* Footer */
+.main-footer { 
+    background: var(--primary); 
+    color: var(--white); 
+    text-align: center; 
+    padding: 40px 0; 
+    margin-top: 60px; 
+}
+
+/* --- ESTILOS DO MODAL --- */
+.modal-back {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(4px); 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 750px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    position: relative;
+    animation: modalSlide 0.4s ease;
+    text-align: left;
+}
+
+@keyframes modalSlide {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-close:hover { color: #e74c3c; }
+.modal-flex { display: flex; gap: 30px; margin-top: 15px; }
+.modal-img-container { flex: 1; display: flex; align-items: center; }
+.modal-img-container img { width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 10px; }
+.modal-text-container { flex: 1.3; }
+
+/* Responsividade */
+@media(max-width: 768px) {
+    .logo, nav { float: none; text-align: center; }
+    nav ul { justify-content: center; margin-top: 15px; }
+    nav li { margin: 0 10px; }
+    .intro-flex, .modal-flex { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 1.8rem; }
+    .models-grid, .grid, .selector-wrapper { grid-template-columns: 1fr; flex-direction: column; }
+    .selector-wrapper button { width: 100%; }
+}
