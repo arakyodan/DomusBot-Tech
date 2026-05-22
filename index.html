@@ -61,3 +61,144 @@
                 <p>Modelo em formato de cachorro que auxilia PcDs e cegos na locomoção e segurança perimetral.</p>
                 <span class="btn-comprar">Ver Detalhes</span>
             </div>
+
+            <div class="model-card" onclick="abrirDetalhes('DomusButler')">
+                <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=500&q=80" alt="Robô Doméstico DomusButler">
+                <h3>DomusButler (Doméstico)</h3>
+                <p>Focado na automação de tarefas diárias e assistência física leve para gestão residencial.</p>
+                <span class="btn-comprar">Ver Detalhes</span>
+            </div>
+
+            <div class="model-card" onclick="abrirDetalhes('DomusBuddy')">
+                <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&w=500&q=80" alt="Robô Amigo DomusBuddy">
+                <h3>DomusBuddy (Companhia)</h3>
+                <p>Especializado em interação social e suporte emocional para combater o isolamento.</p>
+                <span class="btn-comprar">Ver Detalhes</span>
+            </div>
+        </div>
+
+        <div class="grid" style="margin-top: 50px;">
+            <div class="card">
+                <h3><i class="bi bi-eye"></i> Visão Computacional</h3>
+                <p>Sensores LiDAR para mapeamento 3D e reconhecimento de riscos (quedas/obstruções).</p>
+            </div>
+            <div class="card">
+                <h3><i class="bi bi-cpu"></i> Edge Computing</h3>
+                <p>Processamento local no hardware: rapidez de resposta e privacidade absoluta.</p>
+            </div>
+            <div class="card">
+                <h3><i class="bi bi-shield-lock"></i> Privacy by Design</h3>
+                <p>Criptografia assimétrica e anonimização de dados desde a concepção do produto.</p>
+            </div>
+        </div>
+
+        <div id="modal-detalhes" class="modal-back">
+            <div class="modal-content">
+                <span class="modal-close" onclick="fecharModal()">&times;</span>
+                <div class="modal-flex">
+                    <div class="modal-img-container">
+                        <img id="modal-img" src="" alt="Imagem do Robô">
+                    </div>
+                    <div class="modal-text-container">
+                        <h2 id="modal-titulo" style="color: var(--primary); margin-top: 0;">Nome do Robô</h2>
+                        <p id="modal-descricao" style="font-weight: 500; color: #555;"></p>
+                        
+                        <h4 style="color: var(--primary); margin-bottom: 5px;"><i class="bi bi-gear-fill"></i> Especificações Técnicas:</h4>
+                        <ul id="modal-especificacoes" style="padding-left: 20px; margin-bottom: 20px;"></ul>
+                        
+                        <h4 style="color: var(--primary); margin-bottom: 5px;"><i class="bi bi-check-circle-fill"></i> O que ele pode fazer:</h4>
+                        <p id="modal-detalhes-func" style="line-height: 1.5; color: var(--text); margin-bottom: 20px;"></p>
+                        
+                        <button id="modal-btn-comprar" class="btn-comprar" style="border: none; width: 100%; padding: 12px; font-size: 1rem; cursor: pointer; text-align: center;">Adquirir e Licenciar Robô</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="juridico" class="page-content">
+        <h2>Portal de Conformidade, Governança e LGPD</h2>
+        
+        <div class="governança-box" style="margin-bottom: 30px;">
+            <h3>Estrutura de Governança Corporativa</h3>
+            <p>Alinhada ao tipo societário LTDA, a administração da DomusBot Tech é exercida de forma conjunta pelos sócios quotistas, contando com um comitê técnico de Ética e Segurança de Dados, garantindo decisões rápidas, compliance legal estrito e prestação de contas transparente.</p>
+        </div>
+        
+        <div class="simulador-box">
+            <p>Selecione uma situação para entender como nossos protocolos protegem seus dados:</p>
+            
+            <div class="selector-wrapper" style="margin: 20px 0; display: flex; gap: 10px; flex-wrap: wrap;">
+                <select id="situacao" style="padding: 10px; flex: 1; min-width: 250px; border-radius: 5px; background: #fff; color: #333; border: 1px solid #ccc;">
+                    <option value="">-- Selecione uma situação --</option>
+                    <option value="privacidade">Monitoramento em áreas íntimas (Quartos/Banheiros)</option>
+                    <option value="dados">Tratamento de dados sensíveis (Biometria)</option>
+                    <option value="acesso">Acesso de terceiros às imagens (Criptografia)</option>
+                    <option value="descarte">Cancelamento do serviço ou venda do robô (Eliminação de dados)</option>
+                    <option value="seguranca">Tentativa de invasão externa ou falha de segurança (Cibersegurança)</option>
+                </select>
+                <button onclick="analisar()" style="padding: 10px 20px; background: var(--accent); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Analisar Proteção</button>
+            </div>
+
+            <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+            <div id="ajuda-especifica" style="margin-top: 15px; color: #555; line-height: 1.6;"></div>
+        </div>
+
+        <div class="highlights" style="margin-top: 30px;">
+            <h3>Pilares Éticos e Legais:</h3>
+            <ul>
+                <li><strong>Consentimento (Art. 11 LGPD):</strong> Tratamento de dados sensíveis baseado em autorização explícita e revogável a qualquer momento pelo titular.</li>
+                <li><strong>Acesso Zero-Knowledge:</strong> Protocolo tecnológico que impede que a nossa própria equipe tenha acesso às imagens brutas gravadas nos lares.</li>
+                <li><strong>Direitos do Titular (Art. 18 LGPD):</strong> Dashboard nativo nos robôs que permite ao cliente consultar, retificar ou deletar seus logs de funcionamento imediatamente.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="compra" class="page-content">
+        <h2>Adquirir Solução DomusBot Tech</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Inicie o processo de licenciamento e segurança assistiva para o seu lar.</p>
+
+        <div class="checkout-container" style="display: flex; gap: 40px; flex-wrap: wrap;">
+            <div class="checkout-box" style="flex: 1; min-width: 300px; background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <h3>1. Dados do Titular Contratante</h3>
+                <form id="form-compra" onsubmit="finalizarPedido(event)">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display:block; margin-bottom:5px; font-weight:600;">Modelo Selecionado:</label>
+                        <input type="text" id="robo-selecionado" readonly style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px; background:#eee; font-weight:bold; color:var(--primary);">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label style="display:block; margin-bottom:5px;">Nome Completo:</label>
+                        <input type="text" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label style="display:block; margin-bottom:5px;">CPF (para fins contratuais):</label>
+                        <input type="text" placeholder="000.000.000-00" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;">
+                    </div>
+                    <button type="submit" style="width:100%; padding:12px; background:var(--accent); color:white; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">Gerar Termo de Adesão</button>
+                </form>
+            </div>
+
+            <div class="checkout-box" style="flex: 1; min-width: 300px; background: #fffdf3; padding: 30px; border-radius: 12px; border-left: 5px solid #b8860b; height: fit-content; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <h3><i class="bi bi-file-earmark-text"></i> Transparência Contratual</h3>
+                <p style="font-size: 0.9rem; color: #555;">Ao avançar, você estará formalizando um termo de prestação de serviços com a <strong>DomusBot Tech Ltda</strong>.</p>
+                <ul style="font-size: 0.85rem; color: #444; padding-left: 20px; margin-top: 15px; list-style: square;">
+                    <li style="margin-bottom: 10px;"><strong>Responsabilidade Limitada:</strong> A garantia e assistência técnica seguem estritamente os limites do Capital Social integralizado no Ato Constitutivo da empresa.</li>
+                    <li><strong>Consentimento LGPD:</strong> A ativação do hardware está condicionada à assinatura digital do Termo de Consentimento para tratamento de dados periféricos biométricos (Art. 11, Lei 13.709).</li>
+                </ul>
+                <div id="status-compra" style="margin-top: 20px; padding: 15px; border-radius: 5px; font-weight: bold; text-align: center; display: none;"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <p>&copy; 2026 DomusBot Tech. Projeto A3 - Teoria da Empresa e Direito Societário.</p>
+        <p style="font-size: 0.85rem; color: #bbb; margin-top: 5px;">Integrantes: Wellington Jonatan e Wallace Wagner Ubirajara de Souza Lima</p>
+        <p style="font-size: 0.75rem; color: #888; margin-top: 5px;">Profa. Renata Ribeiro | Unidade Curricular: Teoria da Empresa e Direito Societário - UNP.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
