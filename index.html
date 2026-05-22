@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DomusBot Tech | Robótica Assistiva</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +14,9 @@
         <div class="logo">DOMUSBOT <span>TECH</span></div>
         <nav>
             <ul>
-                <li><a href="#empresa">A Empresa</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
-                <li><a href="#juridico">Conformidade</a></li>
+                <li><a href="#empresa" class="nav-link active-menu">A Empresa</a></li>
+                <li><a href="#tecnologia" class="nav-link">Tecnologia</a></li>
+                <li><a href="#juridico" class="nav-link">Conformidade & LGPD</a></li>
             </ul>
         </nav>
     </div>
@@ -29,13 +30,17 @@
 </section>
 
 <main class="container">
-    <!-- SEÇÃO 1: A EMPRESA (Apresentação e Dia a Dia) -->
+    
     <section id="empresa" class="page-content active">
         <div class="intro-flex">
             <div class="intro-text">
                 <h2>Inovação que Transforma Vidas</h2>
                 <p>A DomusBot Tech é uma startup de base tecnológica dedicada ao desenvolvimento e licenciamento de robôs autônomos para assistência domiciliar. Nossa missão é redefinir a autonomia no lar, integrando inteligência artificial para suportar indivíduos em suas tarefas diárias.</p>
-                <p><strong>Tipo Societário:</strong> Sociedade Limitada (LTDA), escolhida pela necessidade de segregação patrimonial e proteção jurídica dos sócios conforme a Teoria da Empresa.</p>
+                
+                <div class="legal-box-info">
+                    <p><strong>Tipo Societário:</strong> Sociedade Limitada (LTDA). Escolhida estrategicamente pela necessidade de segregação patrimonial, limitando a responsabilidade dos sócios ao valor de suas quotas, garantindo segurança jurídica para atração de investimentos em P&D.</p>
+                    <p><strong>Impacto Social e Econômico:</strong> Mitiga o isolamento de idosos, oferece suporte operacional a PcDs e reduz custos com assistência médica de longa permanência, desonerando os sistemas de saúde pública e privada.</p>
+                </div>
             </div>
             <div class="intro-image">
                 <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robô DomusBot ajudando um idoso">
@@ -44,11 +49,9 @@
         </div>
     </section>
 
-    <!-- SEÇÃO 2: TECNOLOGIA (Linha de Produtos) -->
     <section id="tecnologia" class="page-content">
         <h2 style="text-align: center; margin-bottom: 30px;">Nossa Linha de Robôs</h2>
         
-        <!-- Grid de Modelos -->
         <div class="models-grid">
             <div class="model-card">
                 <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=300&q=80" alt="Robô Guia">
@@ -69,49 +72,53 @@
             </div>
         </div>
 
-        <!-- Diferenciais Técnicos -->
         <div class="grid" style="margin-top: 50px;">
             <div class="card">
-                <h3>Visão Computacional</h3>
+                <h3><i class="bi bi-eye"></i> Visão Computacional</h3>
                 <p>Sensores LiDAR para mapeamento 3D e reconhecimento de riscos (quedas/obstruções).</p>
             </div>
             <div class="card">
-                <h3>Edge Computing</h3>
+                <h3><i class="bi bi-cpu"></i> Edge Computing</h3>
                 <p>Processamento local no hardware: rapidez de resposta e privacidade absoluta.</p>
             </div>
             <div class="card">
-                <h3>Privacy by Design</h3>
+                <h3><i class="bi bi-shield-lock"></i> Privacy by Design</h3>
                 <p>Criptografia assimétrica e anonimização de dados desde a concepção do produto.</p>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO 3: CONFORMIDADE (Simulador Jurídico) -->
     <section id="juridico" class="page-content">
-        <h2>Portal de Conformidade e LGPD</h2>
+        <h2>Portal de Conformidade, Governança e LGPD</h2>
+        
+        <div class="governança-box" style="margin-bottom: 30px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db;">
+            <h3>Estrutura de Governança Corporativa</h3>
+            <p>Alinhada ao tipo societário LTDA, a administração da DomusBot Tech é exercida de forma conjunta pelos sócios quotistas, contando com um comitê técnico de Ética e Segurança de Dados, garantindo decisões rápidas, compliance legal estrito e prestação de contas transparente.</p>
+        </div>
         
         <div class="simulador-box">
             <p>Selecione uma situação para entender como nossos protocolos protegem seus dados:</p>
             
-            <div style="margin: 20px 0;">
-                <select id="situacao" style="padding: 10px; width: 70%; border-radius: 5px;">
+            <div class="selector-wrapper" style="margin: 20px 0; display: flex; gap: 10px; flex-wrap: wrap;">
+                <select id="situacao" style="padding: 10px; flex: 1; min-width: 250px; border-radius: 5px; background: #222; color: #fff; border: 1px solid #44;">
                     <option value="">-- Selecione uma situação --</option>
                     <option value="privacidade">Monitoramento em áreas íntimas (Quartos/Banheiros)</option>
                     <option value="dados">Tratamento de dados sensíveis (Biometria)</option>
                     <option value="acesso">Acesso de terceiros às imagens (Criptografia)</option>
                 </select>
-                <button onclick="analisar()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Analisar Proteção</button>
+                <button onclick="analisar()" style="padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Analisar Proteção</button>
             </div>
 
-            <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
-            <div id="ajuda-especifica" style="margin-top: 15px; color: #555;"></div>
+            <div id="resultado" style="margin-top: 20px; font-weight: bold; color: #2ecc71;"></div>
+            <div id="ajuda-especifica" style="margin-top: 15px; color: #ccc; line-height: 1.6;"></div>
         </div>
 
         <div class="highlights" style="margin-top: 30px;">
-            <h3>Pilares Éticos:</h3>
+            <h3>Pilares Éticos e Legais:</h3>
             <ul>
-                <li><strong>Consentimento (Art. 11 LGPD):</strong> Tratamento de dados sensíveis baseado em autorização específica.</li>
-                <li><strong>Acesso Zero-Knowledge:</strong> A empresa não possui chaves para ver imagens das residências.</li>
+                <li><strong>Consentimento (Art. 11 LGPD):</strong> Tratamento de dados sensíveis baseado em autorização explícita e revogável a qualquer momento pelo titular.</li>
+                <li><strong>Acesso Zero-Knowledge:</strong> Protocolo tecnológico que impede que a nossa própria equipe tenha acesso às imagens brutas gravadas nos lares.</li>
+                <li><strong>Direitos do Titular (Art. 18 LGPD):</strong> Dashboard nativo nos robôs que permite ao cliente consultar, retificar ou deletar seus logs de funcionamento imediatamente.</li>
             </ul>
         </div>
     </section>
@@ -120,7 +127,8 @@
 <footer class="main-footer">
     <div class="container">
         <p>&copy; 2026 DomusBot Tech. Projeto A3 - Teoria da Empresa e Direito Societário.</p>
-        <p>Integrantes: Wellington Jonatan e Wallace</p>
+        <p style="font-size: 0.85rem; color: #888; margin-top: 5px;">Integrantes: Wellington Jonatan e Wallace Wagner Ubirajara de Souza Lima</p>
+        <p style="font-size: 0.75rem; color: #555; margin-top: 5px;">Profa. Renata Ribeiro | Unidade Curricular: Teoria da Empresa e Direito Societário - UNP.</p>
     </div>
 </footer>
 
