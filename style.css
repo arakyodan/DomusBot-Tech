@@ -4,6 +4,7 @@
     --bg: #f4f7f6;
     --text: #333;
     --white: #ffffff;
+    --success: #2ecc71; /* Cor para o resultado positivo do simulador */
 }
 
 /* Configurações Gerais */
@@ -65,9 +66,17 @@ nav a {
     font-size: 16px; 
     font-weight: 500;
     transition: 0.3s; 
+    padding-bottom: 5px;
 }
 
 nav a:hover { color: var(--accent); }
+
+/* CLASSE NOVA: Feedback visual da aba selecionada no menu */
+nav a.active-menu {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    font-weight: bold;
+}
 
 /* Seções e Controle de Visibilidade (SPA) */
 .page-content {
@@ -112,6 +121,22 @@ nav a:hover { color: var(--accent); }
 .intro-text { flex: 1; }
 .intro-text h2 { color: var(--primary); margin-bottom: 20px; }
 
+/* Bloco de Informações Jurídicas (Tipo Societário e Impacto A3) */
+.legal-box-info {
+    margin-top: 25px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.legal-box-info p {
+    margin-bottom: 15px;
+}
+.legal-box-info p:last-child {
+    margin-bottom: 0;
+}
+
 .intro-image { flex: 1; text-align: center; }
 .intro-image img {
     width: 100%;
@@ -120,74 +145,4 @@ nav a:hover { color: var(--accent); }
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.caption { margin-top: 10px; font-style: italic; color: #666; }
-
-/* Grid de Modelos de Robôs */
-.models-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.model-card {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid #e1e8ed;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.model-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    border-color: var(--accent);
-}
-
-.model-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.model-card h3 { color: var(--primary); margin-bottom: 15px; }
-
-/* Simulador e Destaques */
-.simulador-box {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.highlights { 
-    background: var(--white); 
-    padding: 30px; 
-    border-radius: 8px; 
-    border-left: 5px solid var(--accent);
-}
-
-/* Footer */
-.main-footer { 
-    background: var(--primary); 
-    color: var(--white); 
-    text-align: center; 
-    padding: 30px 0; 
-    margin-top: 60px; 
-}
-
-/* Responsividade (Mobile) */
-@media(max-width: 768px) {
-    .logo, nav { float: none; text-align: center; }
-    nav ul { justify-content: center; margin-top: 15px; }
-    nav li { margin: 0 10px; }
-    
-    .intro-flex { flex-direction: column; text-align: center; }
-    .hero h1 { font-size: 1.8rem; }
-    
-    .models-grid { grid-template-columns: 1fr; }
-}
+.caption { margin-
